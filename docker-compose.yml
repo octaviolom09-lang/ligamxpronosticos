@@ -1,0 +1,9 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8080:80"
+    environment:
+      - APIFOOTBALL_KEY=${APIFOOTBALL_KEY}
+    volumes:
+      - ./js/config.js:/usr/share/nginx/html/js/config.js:ro
